@@ -356,6 +356,7 @@ class VmPrinter(ColumnPrinter):
         'net-cdp\.[0-9]+',
         'vmkiscsid\.[0-9]+',
         'vmware-vmkauthd\.[0-9]+',
+        'pool[0-9]+',
     ])
 
     def filter(self, nameValue):
