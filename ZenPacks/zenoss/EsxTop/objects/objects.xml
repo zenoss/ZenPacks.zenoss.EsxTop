@@ -48,7 +48,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -s ${dev/manageIp} -u ${dev/zCommandUsername} -p ${dev/zCommandPassword} -d "Group Cpu" -c host
+${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -s ${dev/manageIp} -u "${dev/zCommandUsername}" -p ${dev/zCommandPassword} -d "Group Cpu" -c host
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
@@ -92,7 +92,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u ${dev/zCommandUsername} -p ${dev/zCommandPassword} -s ${dev/manageIp} -d Memory
+${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u "${dev/zCommandUsername}" -p ${dev/zCommandPassword} -s ${dev/manageIp} -d Memory
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
@@ -144,7 +144,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u ${dev/zCommandUsername} -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Physical Cpu" -c _Total
+${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u "${dev/zCommandUsername}" -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Physical Cpu" -c _Total
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
@@ -188,7 +188,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u ${dev/zCommandUsername} -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Physical Cpu Load"
+${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u "${dev/zCommandUsername}" -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Physical Cpu Load"
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
@@ -354,7 +354,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u ${dev/zCommandUsername} -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Group Cpu" -c ${here/titleOrId}
+${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u "${dev/zCommandUsername}" -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Group Cpu" -c ${here/titleOrId}
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
@@ -441,7 +441,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u ${dev/zCommandUsername} -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Group Memory" -c ${here/titleOrId}
+${here/ZenPackManager/packs/ZenPacks.zenoss.EsxTop/path}/libexec/check_esxtop -u "${dev/zCommandUsername}" -p ${dev/zCommandPassword} -s ${dev/manageIp} -d "Group Memory" -c ${here/titleOrId}
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
