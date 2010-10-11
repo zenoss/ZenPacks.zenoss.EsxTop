@@ -205,10 +205,10 @@ class EsxTopRunner(object):
 
         viserver = self.options.vcserver
         if viserver:
-            COMMAND_FORMAT = """resxtop --server %s --vihost %s --username %s -n 1 -b %s 1> %s"""
+            COMMAND_FORMAT = """resxtop --server %s --vihost %s --username "%s" -n 1 -b "%s" 1> "%s" """
             command = COMMAND_FORMAT % (viserver, server, username, configFile, cacheFile)
         else:
-            COMMAND_FORMAT = """resxtop --server %s --username %s -n 1 -b %s 1> %s"""
+            COMMAND_FORMAT = """resxtop --server %s --username "%s" -n 1 -b "%s" 1> "%s" """
             command = COMMAND_FORMAT % (server, username, configFile, cacheFile)
         return command
 
