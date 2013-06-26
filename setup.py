@@ -8,7 +8,7 @@ AUTHOR = "Zenoss"
 LICENSE = ""
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.zenoss']
 PACKAGES = ['ZenPacks', 'ZenPacks.zenoss', 'ZenPacks.zenoss.EsxTop']
-INSTALL_REQUIRES = ['ZenPacks.zenoss.ZenossVirtualHostMonitor', 'Zenoss >= 2.5']
+INSTALL_REQUIRES = ['ZenPacks.zenoss.ZenossVirtualHostMonitor']
 COMPAT_ZENOSS_VERS = ">=2.5"
 PREV_ZENPACK_NAME = ""
 # STOP_REPLACEMENTS
