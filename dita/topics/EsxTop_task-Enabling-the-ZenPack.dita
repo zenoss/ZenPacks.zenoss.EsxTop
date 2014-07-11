@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:task" "task.dtd">
+<task id="d28e242"><title>Enabling the ZenPack</title><taskbody><context><p>Follow these steps to enable this ZenPack. From the
+      <ph conkeyref="names/platform"/> interface, add a host:</p></context><steps-informal><ol>
+        <li>
+          <p>From Infrastructure &gt; Devices, navigate to the
+          <filepath outputclass="literal">/Devices/Server/Virtual Hosts/EsxTop</filepath> device
+          class.</p>
+        </li>
+
+        <li>
+          <p>From <!-- inlinemediaobject: images/screens/Add_Device_Button.png--> the Add Device menu, select Add a Single Device.</p>
+
+          <p>The Add a Single Device dialog appears.</p>
+        </li>
+
+        <li>
+          <p>Enter a host name or IP address.</p>
+        </li>
+
+        <li>
+          <p>De-select the Model Device option.</p>
+        </li>
+
+        <li>
+          <p>Click <b>Add</b>.</p>
+        </li>
+
+        <li>
+          <p>Select the newly added device in the list.</p>
+
+          <p>The device overview appears.</p>
+        </li>
+
+        <li>
+          <p>Click <b>Details</b>, and then
+          select Configuration Properties in the left panel.</p>
+        </li>
+
+        <li>
+          <p>Enter login credentials for the zCommandUsername and
+          zCommandPassword configuration properties, and then click <b>Save</b>.</p>
+        </li>
+
+        <li>
+          <p>If the device has an SNMP agent installed, update the ESX
+          device configuration with the appropriate SNMP configuration
+          information, and then add any desired modeler plugins.</p>
+        </li>
+
+        <li>
+          <p>From <!-- inlinemediaobject: images/screens/Action_Menu.png--> the Action menu, select Model device.</p>
+        </li>
+      </ol></steps-informal></taskbody></task>

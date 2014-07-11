@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:map" "map.dtd">
+<map>
+   <title>EsxTop</title>
+   <topicref href="topics/EsxTop.dita">
+      <topicref href="topics/EsxTop_ref-Prerequisites.dita"/>
+      <topicref href="topics/EsxTop_task-Installing-Prerequisite-Libraries.dita"/>
+      <topicref href="topics/EsxTop_task-Enabling-the-ZenPack.dita"/>
+      <topicref href="topics/EsxTop_ref-Daemons.dita"/>
+   </topicref>
+</map>

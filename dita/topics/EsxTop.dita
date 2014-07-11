@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:reference" "reference.dtd">
+<reference id="referenceid">
+  <title>(EsxTop) VMware ESX Server</title>
+  <shortdesc>The <zenpack>ZenPacks.zenoss.EsxTop</zenpack> ZenPack uses the VMware <codeph>resxtop</codeph> command to
+    gather performance information about VMware Infrastructure<tm tmtype="tm"/> ESX<tm tmtype="tm"/> servers.</shortdesc>
+  <refbody>
+    <section>
+      <note>This ZenPack is deprecated; see <xref keyref="reference-ZenPacks.zenoss.vSphere"/>.</note>
+      <p>This ZenPack can be used alone, or with one of the other VMware ZenPacks.
+        When used alone, a basic modeler creates virtual machines under the
+        <filepath>/Devices/Server/Virtual Hosts/EsxTop</filepath> device class for
+        any host device that is added and modeled. Otherwise, performance data
+        can be collected for the ESX hosts modeled by the other ZenPacks.</p>
+    </section>
+  </refbody>
+</reference>

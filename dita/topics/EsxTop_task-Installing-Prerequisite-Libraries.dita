@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:task" "task.dtd">
+<task id="d28e105"><title>Installing Prerequisite Libraries</title><taskbody><context><p>The VMware vSphere CLI is required for access to the
+      <codeph outputclass="literal">resxtop</codeph> command, which enables <ph conkeyref="names/platform"/> to model and gather performance information
+      about individual ESX servers.</p><p>Follow these steps to install the CLI and required
+      software:</p></context><steps-informal><ol>
+        <li>
+          <p>If you have not yet installed it, install the OpenSSL
+          development package. For example, for an RPM-based system,
+          enter:</p>
+
+          <codeblock outputclass="programlisting">yum install openssl-devel</codeblock>
+        </li>
+
+        <li>
+          <p>From your VMware account, download the VMware vSphere
+          CLI.</p>
+
+          <note>
+            <p>For downloads and documentation, go to:</p>
+
+            <p><xref href="http://downloads.vmware.com/d/details/vcli41/ZHcqYmRoaCpiZHRAag==" scope="external" format="html">http://downloads.vmware.com/d/details/vcli41/ZHcqYmRoaCpiZHRAag==</xref></p>
+          </note>
+        </li>
+
+        <li>
+          <p>Copy the package to each <ph conkeyref="names/platform"/> collector.</p>
+        </li>
+
+        <li>
+          <p>For each collector:</p>
+
+          <ol>
+            <li>
+              <p>Expand the package file.</p>
+            </li>
+
+            <li>
+              <p>Run the following command to install the package:</p>
+
+              <codeblock outputclass="programlisting">./vmware-install.pl</codeblock>
+            </li>
+
+            <li>
+              <p>As the zenoss user, run the following command to verify
+              successful installation:</p>
+
+              <codeblock outputclass="programlisting">resxtop --server <i>myESXServer</i> --user userOnRemoteEsxServerAllowedToUseEsxTop -b -n 1 -a</codeblock>
+
+              <p>The <codeph outputclass="literal">resxtop</codeph> command prompts for a
+              password.</p>
+            </li>
+
+            <li>
+              <p>Enter the password for a user with permissions on the
+              remote ESX server.</p>
+
+              <p>If the command is working correctly, then a screen
+              displays with several pages of command output.</p>
+            </li>
+
+            <li>
+              <p>Create a symbolic link from the location that the
+              <codeph outputclass="literal">resxtop</codeph> command was installed into the
+              <filepath outputclass="literal">$ZENHOME/libexec</filepath> directory. This allows the
+              <codeph outputclass="literal">check_esxtop </codeph>command to automatically
+              determine which binary to run. For example:</p>
+
+              <codeblock outputclass="programlisting">cd $ZENHOME/libexec
+ln -s <i>PathToResxtop</i></codeblock>
+            </li>
+
+            <li>
+              <p>Test the <codeph outputclass="literal">check_esxtop</codeph> command by
+              showing the VMs on the remote server:</p>
+
+              <codeblock outputclass="programlisting">$ZENHOME/ZenPacks/Ze*EsxTop*/Z*/z*/E*/libexec/check_esxtop --server=myEsxserver \
+ --user=userOnRemoteEsxServerAllowedToUseEsxTop --password=password --showvms</codeblock>
+            </li>
+          </ol>
+        </li>
+      </ol></steps-informal></taskbody></task>
